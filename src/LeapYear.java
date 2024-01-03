@@ -1,0 +1,20 @@
+public class LeapYear {
+    public static void main(String[] args) {
+        int year = 1700;
+        boolean leapyears = isLeapYear(year);
+        System.out.println(leapyears);
+    }
+    public static boolean isLeapYear(int year){
+        if(year<1 || year>=9999){
+            return false;
+        }
+        if (year % 4 ==0 && year % 100 !=0 && year%400 != 0){
+            return true;
+        } else if (year % 4 ==0 && year % 100 ==0 && year%400 == 0) {
+            return true ;
+        } else {
+            return false;
+
+        }
+    }
+}
